@@ -1,7 +1,24 @@
-html { 
-  background: url("http://i67.tinypic.com/29o5ndc.jpg") no-repeat center center fixed; 
+html {
+  background: url("https://i.imgur.com/2zvDZwl.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+div.container1 {
+  margin: 0;
+  opacity: 0.5;
+  background: rgb(170, 170, 166);
+  border-radius: 12px;
+  position: absolute;
+  padding: 5em;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
+div.column {
+  padding: 1em;
 }
