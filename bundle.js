@@ -1,3 +1,70 @@
+(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+module.exports.aquaServ = [{
+  description: '1/2 cup',
+  value: 0.5
+}, {
+  description: '1 cup',
+  value: 1
+}, {
+  description: '1 3/4 cups',
+  value: 2
+},
+{
+  description: '3 1/2 cups',
+  value: 3
+}, {
+  description: '5 1/4 cups',
+  value: 4
+}, {
+  description: '8 3/4 cups',
+  value: 5
+}
+]
+
+module.exports.personRice = [{
+  description: '1/2 cup',
+  value: 1
+}, {
+  description: '1 cup',
+  value: 2
+}, {
+  description: '1 1/2 cups',
+  value: 3
+},
+{
+  description: '2 cups',
+  value: 4
+}, {
+  description: '2 1/2 cups',
+  value: 5
+}, {
+  description: '5 cups',
+  value: 10
+}
+]
+
+module.exports.personWater = [{
+  description: '1/2 cup',
+  value: 1
+}, {
+  description: '1 cup',
+  value: 2
+}, {
+  description: '1 3/4 cups',
+  value: 3
+},
+{
+  description: '3 1/2 cups',
+  value: 4
+}, {
+  description: '5 1/4 cups',
+  value: 5
+}, {
+  description: '8 3/4 cups',
+  value: 10
+}
+]
+},{}],2:[function(require,module,exports){
 const {
   aquaServ
 } = require('./data')
@@ -79,3 +146,4 @@ submit.addEventListener('click', function (event) {
 
 //   })
 //
+},{"./data":1}]},{},[2]);

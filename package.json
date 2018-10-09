@@ -4,7 +4,10 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "browserify main.js -o bundle.js",
+    "watch": "watchify main.js -o bundle.js",
+    "dev-server": "live-server .",
+    "dev": "run-all \"npm run watch\" \"npm run dev-server\""
   },
   "keywords": [],
   "author": "",
@@ -14,6 +17,10 @@
     "mocha": "^5.2.0"
   },
   "dependencies": {
-    "jquery": "^3.3.1"
+    "browserify": "^16.2.3",
+    "jquery": "^3.3.1",
+    "live-server": "^1.2.0",
+    "run-all": "^1.0.1",
+    "watchify": "^3.11.0"
   }
 }
