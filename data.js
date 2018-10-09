@@ -49,17 +49,17 @@ module.exports.ricePerson = [{
   description: 'of 1 cup',
   value: 1
 }, {
-  description: 'of 1 3/4 cups',
+  description: 'of 1 1/2 cups',
   value: 2
 },
 {
-  description: 'of 3 1/2 cups',
+  description: 'of 2 cups',
   value: 3
 }, {
-  description: 'of 5 1/4 cups',
+  description: 'of 2 1/2 cups',
   value: 4
 }, {
-  description: 'of 8 3/4 cups',
+  description: 'of 5 cups',
   value: 5
 }
 ]

@@ -6,6 +6,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Nice Rice.</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="icon" href="https://i.imgur.com/956a259.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,6 +15,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script defer src="bundle.js"></script>
   <link rel="stylesheet" href="inc/TimeCircles.css" />
+  <script type="text/javascript" src="inc/TimeCircles.js"></script>
 
 </head>
 
@@ -22,12 +24,13 @@
     <div id="header" class="container is-fluid">
       <div class="col-md-1 col-sm-1">
         <div class="row">
+          
           <h1 class="title has-text-grey-light has-text-left-desktop">Nice Rice.</h1>
-          <p class="subtitle has-text-grey-light has-text-left-desktop">Select a desired serving size from the drop menu and
-            <strong>Enjoy!</strong>
+          <p class="subtitle has-text-grey-light has-text-left-desktop">Select Desired Portion from Drop
+            Menu and Enjoy!
             <i class="fas fa-utensils"></i>
           </p>
-          </div>
+        </div>
       </div>
     </div>
 
@@ -48,6 +51,12 @@
     </div>
 
     <div class="container2 is-fluid">
+      <div class="row">
+
+        <button class="btn btn-success startTimer">Begin</button>
+        <button class="btn btn-danger stopTimer">End</button>
+        <button class="btn btn-danger resetTimer">Reset</button>
+      </div>
 
       <div class="column is-one-third">
 
@@ -87,13 +96,13 @@
 
         <div class="column">
           <div class="row">
+
             <button id="resetSubmit" type="submit" class="button is-dark has-text-grey-light">Refresh</button>
-            <p>Refresh Between Selections</p>
           </div>
         </div>
       </div>
     </div>
   </div>
+  </div>
 </body>
-
 </html>
