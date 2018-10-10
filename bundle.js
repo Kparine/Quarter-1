@@ -13,7 +13,7 @@ module.exports.oneServe = [{
   description: '3 cups of',
   value: 3
 }, {
-  description: '4cups of',
+  description: '4 cups of',
   value: 4
 }, {
   description: '5 cups of',
@@ -72,14 +72,14 @@ module.exports.waterServe = [{
   description: '1 3/4 cup of',
   value: 1
 }, {
-  description: '3 1/2 cups of',
+  description: '2 3/4 cups of',
   value: 2
 },
 {
-  description: '5 1/4 cups of',
+  description: '3 1/2 cups of',
   value: 3
 }, {
-  description: '7 cups of',
+  description: '4 1/2 cups of',
   value: 4
 }, {
   description: '8 3/4 cups of',
@@ -93,6 +93,21 @@ const {
   ricePerson,
   waterServe
 } = require('./data')
+
+
+//configs here from jquery library
+// animation: "smooth",
+// count_past_zero: true,
+// Minutes: {
+//   show: true,
+//   text: "Minutes",
+//   color: "#BFB"
+//   },
+//   Seconds: {
+//   show: true,
+//   color: "#F99"
+//   }
+
 
 //START SERVINGS SUBMIT
 
@@ -117,7 +132,9 @@ let submit = document.querySelector('#servingSubmit')
 submit.addEventListener('click', function (event) {
   instructionsServings()
   instructionsServings.textContent += event.target.textContent
+  submitTwo.setAttribute('disabled', 'true')
 })
+
 
 //END SERVINGS SUBMIT
 
@@ -144,8 +161,8 @@ let submitTwo = document.querySelector("#personSubmit")
 submitTwo.addEventListener('click', function (e) {
   instructionsPerson()
   instructionsPerson.textContent += e.target.textContent
+  submit.setAttribute('disabled', 'true')
 })
-
 // //RESET BUTTON
 
 let reset = document.querySelector('#resetSubmit')
@@ -153,6 +170,44 @@ let reset = document.querySelector('#resetSubmit')
 reset.addEventListener('click', function (event) {
   event.target = location.reload();
 })
+
+//TIMER FUNCTIONS
+
+$(".demo").TimeCircles({
+  time: {
+    Days: {
+      show: false
+    },
+
+    Hours: {
+      show: false,
+
+    },
+
+    Minutes: {
+      color: "#4286f4"
+    },
+    Seconds: {
+      color: "#41f4c4",
+    }
+  },
+  count_past_zero: false,
+  start: false,
+  direction: "Counter-clockwise",
+  count_past_zero: false,
+  circle_bg_color: '#70000000'
+}).addListener(function (unit, value, total) {
+  //add audio file here
+})
+$("#start").click(function () {
+  $(".demo").TimeCircles().start();
+});
+$("#stop").click(function () {
+  $(".demo").TimeCircles().stop();
+});
+$("#restart").click(function () {
+  $(".demo").TimeCircles().restart();
+});
 
 //LOCAL STORAGE
 // var testObject = document.getElementByID("aguaAmt")
@@ -164,17 +219,4 @@ reset.addEventListener('click', function (event) {
 // var retrievedObject = localStorage.getItem('testObject')
 
 // console.log('retrievedObject: ', JSON.parse(retrievedObject))
-
-// function riceServ() {
-
-// document.getElementById('hidden_elements').style.display = 'none'
-
-// document.querySelector('submit').addEventListener('submit', function (event) {
-
-//   if (event.target.submit === true) {
-//     document.getElementById('hidden_elements').style.display = 'block'
-//   } else {
-//     document.getElementById('hidden_elements').style.display = 'none'
-//   }
-// })
 },{"./data":1}]},{},[2]);

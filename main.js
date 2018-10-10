@@ -5,6 +5,21 @@ const {
   waterServe
 } = require('./data')
 
+
+//configs here from jquery library
+// animation: "smooth",
+// count_past_zero: true,
+// Minutes: {
+//   show: true,
+//   text: "Minutes",
+//   color: "#BFB"
+//   },
+//   Seconds: {
+//   show: true,
+//   color: "#F99"
+//   }
+
+
 //START SERVINGS SUBMIT
 
 function instructionsServings() {
@@ -28,7 +43,9 @@ let submit = document.querySelector('#servingSubmit')
 submit.addEventListener('click', function (event) {
   instructionsServings()
   instructionsServings.textContent += event.target.textContent
+  submitTwo.setAttribute('disabled', 'true')
 })
+
 
 //END SERVINGS SUBMIT
 
@@ -55,8 +72,8 @@ let submitTwo = document.querySelector("#personSubmit")
 submitTwo.addEventListener('click', function (e) {
   instructionsPerson()
   instructionsPerson.textContent += e.target.textContent
+  submit.setAttribute('disabled', 'true')
 })
-
 // //RESET BUTTON
 
 let reset = document.querySelector('#resetSubmit')
@@ -64,6 +81,44 @@ let reset = document.querySelector('#resetSubmit')
 reset.addEventListener('click', function (event) {
   event.target = location.reload();
 })
+
+//TIMER FUNCTIONS
+
+$(".demo").TimeCircles({
+  time: {
+    Days: {
+      show: false
+    },
+
+    Hours: {
+      show: false,
+
+    },
+
+    Minutes: {
+      color: "#4286f4"
+    },
+    Seconds: {
+      color: "#41f4c4",
+    }
+  },
+  count_past_zero: false,
+  start: false,
+  direction: "Counter-clockwise",
+  count_past_zero: false,
+  circle_bg_color: '#70000000'
+}).addListener(function (unit, value, total) {
+  //add audio file here
+})
+$("#start").click(function () {
+  $(".demo").TimeCircles().start();
+});
+$("#stop").click(function () {
+  $(".demo").TimeCircles().stop();
+});
+$("#restart").click(function () {
+  $(".demo").TimeCircles().restart();
+});
 
 //LOCAL STORAGE
 // var testObject = document.getElementByID("aguaAmt")
@@ -75,16 +130,3 @@ reset.addEventListener('click', function (event) {
 // var retrievedObject = localStorage.getItem('testObject')
 
 // console.log('retrievedObject: ', JSON.parse(retrievedObject))
-
-// function riceServ() {
-
-// document.getElementById('hidden_elements').style.display = 'none'
-
-// document.querySelector('submit').addEventListener('submit', function (event) {
-
-//   if (event.target.submit === true) {
-//     document.getElementById('hidden_elements').style.display = 'block'
-//   } else {
-//     document.getElementById('hidden_elements').style.display = 'none'
-//   }
-// })

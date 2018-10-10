@@ -12,7 +12,7 @@ module.exports.oneServe = [{
   description: '3 cups of',
   value: 3
 }, {
-  description: '4cups of',
+  description: '4 cups of',
   value: 4
 }, {
   description: '5 cups of',
@@ -71,14 +71,14 @@ module.exports.waterServe = [{
   description: '1 3/4 cup of',
   value: 1
 }, {
-  description: '3 1/2 cups of',
+  description: '2 3/4 cups of',
   value: 2
 },
 {
-  description: '5 1/4 cups of',
+  description: '3 1/2 cups of',
   value: 3
 }, {
-  description: '7 cups of',
+  description: '4 1/2 cups of',
   value: 4
 }, {
   description: '8 3/4 cups of',
