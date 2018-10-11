@@ -196,7 +196,13 @@ $(".demo").TimeCircles({
   direction: "Counter-clockwise",
   count_past_zero: false,
   circle_bg_color: '#70000000'
-}).addListener(function (unit, value, total) {
+}).addListener(function (total) {
+  if(total === 0){
+
+  } 
+
+  //(callback, type = "visible")
+
   //add audio file here
 })
 $("#start").click(function () {
