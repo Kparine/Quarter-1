@@ -73,3 +73,7 @@ div.timer {
 span {
   color: rgb(75, 74, 74);
 }
+#div.or {
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+}
