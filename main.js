@@ -5,22 +5,13 @@ const {
   waterServe
 } = require('./data')
 
-
-//configs here from jquery library
-// animation: "smooth",
-// count_past_zero: true,
-// Minutes: {
-//   show: true,
-//   text: "Minutes",
-//   color: "#BFB"
-//   },
-//   Seconds: {
-//   show: true,
-//   color: "#F99"
-//   }
-
-
 //START SERVINGS SUBMIT
+
+const riceAmount = localStorage.getItem('riceAmt')
+if (riceAmount) document.getElementById('riceAmt').textContent += riceAmount
+
+const waterAmount = localStorage.getItem('aguaAmt')
+if (waterAmount) document.getElementById('aguaAmt').textContent += waterAmount
 
 function instructionsServings() {
 
@@ -29,46 +20,49 @@ function instructionsServings() {
 
   const rice = oneServe.find(ele => ele.value === parseInt(riceServ.options[riceServ.selectedIndex].value))
   if (rice) {
-    document.getElementById("riceAmt").textContent += rice.description
+    document.getElementById("riceAmt").textContent = rice.description
   }
 
   const water = waterServe.find(ele => ele.value === parseInt(waterServ.options[waterServ.selectedIndex].value))
   if (water) {
-    document.getElementById("aguaAmt").textContent += water.description
+    document.getElementById("aguaAmt").textContent = water.description
   }
+  
+  localStorage.setItem('riceAmt', rice.description)
+  localStorage.setItem('aguaAmt', water.description)
 }
 
 let submit = document.querySelector('#servingSubmit')
-
 submit.addEventListener('click', function (event) {
   instructionsServings()
   instructionsServings.textContent += event.target.textContent
   submitTwo.setAttribute('disabled', 'true')
 })
 
-
 //END SERVINGS SUBMIT
 
-function instructionsPerson() {
 
-  let riceAmount = document.querySelector(".optionTwo")
-  let waterAmount = document.querySelector(".optionTwo")
+function instructionsPerson() {
+  let riceAmount = document.querySelector('.optionTwo')
+  let waterAmount = document.querySelector('.optionTwo')
 
   //START PERSON SUBMIT
 
   const riceTwo = ricePerson.find(ele => ele.value === parseInt(riceAmount.options[riceAmount.selectedIndex].value))
   if (riceTwo) {
-    document.getElementById("riceAmt").textContent += riceTwo.description
+    document.getElementById('riceAmt').textContent = riceTwo.description
   }
-
   const waterTwo = waterServe.find(ele => ele.value === parseInt(waterAmount.options[waterAmount.selectedIndex].value))
   if (waterTwo) {
-    document.getElementById("aguaAmt").textContent += waterTwo.description
+    document.getElementById('aguaAmt').textContent = waterTwo.description
   }
+
+  localStorage.setItem('riceAmt', riceTwo.description)
+  localStorage.setItem('aguaAmt', waterTwo.description)
+
 }
 
 let submitTwo = document.querySelector("#personSubmit")
-
 submitTwo.addEventListener('click', function (e) {
   instructionsPerson()
   instructionsPerson.textContent += e.target.textContent
@@ -77,7 +71,6 @@ submitTwo.addEventListener('click', function (e) {
 // //RESET BUTTON
 
 let reset = document.querySelector('#resetSubmit')
-
 reset.addEventListener('click', function (event) {
   event.target = location.reload();
 })
@@ -92,7 +85,6 @@ $(".demo").TimeCircles({
 
     Hours: {
       show: false,
-
     },
 
     Minutes: {
@@ -107,14 +99,6 @@ $(".demo").TimeCircles({
   direction: "Counter-clockwise",
   count_past_zero: false,
   circle_bg_color: '#70000000'
-}).addListener(function (total) {
-  if(total === 0){
-
-  } 
-
-  //(callback, type = "visible")
-
-  //add audio file here
 })
 $("#start").click(function () {
   $(".demo").TimeCircles().start();
@@ -126,13 +110,13 @@ $("#restart").click(function () {
   $(".demo").TimeCircles().restart();
 });
 
-//LOCAL STORAGE
-// var testObject = document.getElementByID("aguaAmt")
+$(".demo").TimeCircles({count_past_zero: false}).addListener(countdownComplete);
+	
+function countdownComplete(unit, value, total){
+	if(total<=0){
+    $(this).fadeOut('slow').replaceWith("<h1>Ding, Rice is Done!</h1>") 
+    document.querySelector('#alarm').play()
+ 
+  } 
+}
 
-// // Put the object into storage
-// localStorage.setItem('testObject', JSON.stringify(testObject))
-
-// // Retrieve the object from storage
-// var retrievedObject = localStorage.getItem('testObject')
-
-// console.log('retrievedObject: ', JSON.parse(retrievedObject))

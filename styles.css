@@ -1,5 +1,5 @@
 html {
-  background: url("https://i.imgur.com/2zvDZwl.jpg") no-repeat center center fixed;
+  background: url("libs/sebastien-marchand-232356-unsplash.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -7,7 +7,12 @@ html {
 }
 
 h1 {
-  color: whitesmoke;
+  color: #87d88b;
+  font-size: 100px;
+  font-weight: 600;
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-seriff;
+  background: rgba(75, 75, 75, 0.5);
+  border-radius: 12px;
 }
 
 div.container2 {

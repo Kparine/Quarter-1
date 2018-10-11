@@ -6,6 +6,11 @@
   <link rel="icon" type="image/png" href="favicon.ico" sizes="32x32" />
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <audio id="alarm" style="display:none;">
+      
+      <source src="libs/alarm.mp3" type="audio/mpeg">
+      <!-- <embed src="libs/alarm.mp3" hidden="true" autostart="false" loop="false" class="playSound" /> -->
+      </audio>
 
   <title>White Rice.</title>
 
@@ -28,7 +33,7 @@
       <div class="col-md-1 col-sm-1">
         <div class="row">
 
-          <h1 class="title has-text-white has-text-left-desktop">White Rice.</h1>
+          <h2 class="title has-text-white has-text-left-desktop">White Rice.</h2>
           <p class="subtitle has-text-grey-light has-text-left-desktop">Select Desired Portion from Drop
             Menu and Enjoy!
             <i class="fas fa-utensils"></i>
@@ -45,52 +50,56 @@
         </div>
       </div>
       <div class="columns is-centered is-desktop">
-          <div class="column is-one-quarters-mobile is-one-third-desktop">          
+        <div class="column is-one-quarters-mobile is-one-third-desktop">
           <ul id="hidden_elements" class="cookInst">
             <li> <span class="num">1 </span> <span class="text">Rinse <span id="riceAmt"> </span> Rice</span></li>
             <li> <span class="num">2 </span> <span class="text">Boil <span id="aguaAmt"> </span> H2O</span></li>
             <li> <span class="num">3 </span> <span class="text">Add Rice to H2O, Cover</span></li>
             <li> <span class="num">4 </span> <span class="text">Start Timer, Simmer</span></li>
-            <li> <span class="num">5 </span> <span class="text">Ding, Rice is Done!</span></li>
+            <!-- <li> <span class="num">5 </span> <span class="text">Ding, Rice is Done!</span></li> -->
           </ul>
         </div>
 
         <div class="column is-three-quarters-mobile is-two-third-desktop">
-            <div class="container2">
+          <div class="container2">
 
-                <div class="field">
-                  <select class="optionOne" name="servings">
-                    <option value="0">1/2 Serving</option>
-                    <option value="1">1 Serving</option>
-                    <option value="2">2 Servings</option>
-                    <option value="3">3 Servings</option>
-                    <option value="4">4 Servings</option>
-                    <option value="5">5 Servings</option>
-                  </select>
-                </div>
-      
-                <div class="field">
-                  <select class="optionTwo" name="people">
-                    <option value="0">1 Person</option>
-                    <option value="1">2 Persons</option>
-                    <option value="2">3 Persons</option>
-                    <option value="3">4 Persons</option>
-                    <option value="4">5 Persons</option>
-                    <option value="5">>10 Persons</option>
-                  </select>
-                </div>
-                <button id="servingSubmit" class="button is-success has-text-weight-bold is-dark has-text-white is-rounded" onClick="this.disabled = true;">Servings</button>
-                <button id="personSubmit" class="button is-info has-text-weight-bold is-dark has-text-white is-rounded" onClick="this.disabled = true;">People</button>
-                <button id="resetSubmit" type="submit" class="button is-danger has-text-weight-bold is-dark has-text-white is-rounded">Refresh</button>
-              </div>
-          <div id='timer' class="demo" data-timer="1080"></div>
+            <div class="field">
+              <select class="optionOne" name="servings">
+                <option value="0">1/2 Serving</option>
+                <option value="1">1 Serving</option>
+                <option value="2">2 Servings</option>
+                <option value="3">3 Servings</option>
+                <option value="4">4 Servings</option>
+                <option value="5">5 Servings</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <select class="optionTwo" name="people">
+                <option value="0">1 Person</option>
+                <option value="1">2 Persons</option>
+                <option value="2">3 Persons</option>
+                <option value="3">4 Persons</option>
+                <option value="4">5 Persons</option>
+                <option value="5">>10 Persons</option>
+              </select>
+            </div>
+            <button id="servingSubmit" class="button is-success has-text-weight-bold is-dark has-text-white is-rounded"
+              onClick="this.disabled = true;">Servings</button>
+            <button id="personSubmit" class="button is-info has-text-weight-bold is-dark has-text-white is-rounded"
+              onClick="this.disabled = true;">People</button>
+            <button id="resetSubmit" type="submit" class="button is-danger has-text-weight-bold is-dark has-text-white is-rounded">Refresh</button>
+          </div>
+          <div id='timer' class="demo" data-timer="6"></div>
           <button id='start' class="button is-success has-text-weight-bold has-text-white start is-centered is-rounded">Start</button>
           <button id='stop' class="button is-info has-text-weight-bold has-text-white stop is-centered is-rounded">Stop</button>
-          <button id='restart' class="button is-danger has-text-weight-bold has-text-white restart is-centered is-rounded">Refresh</button>
+          <!-- <button id='restart' class="button is-danger has-text-weight-bold has-text-white restart is-centered is-rounded">Refresh</button> -->
         </div>
       </div>
     </div>
   </div>
+
+
 </body>
 
 </html>
