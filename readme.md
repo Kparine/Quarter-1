@@ -8,7 +8,7 @@ Please choose a single portion option, i.e. per serving or per person.
 Then set the timer, an audio alert will activate when the timer has run to zero. 
 
 
-![Alt text](https://github.com/TSPeterson206/Quarter-1/libs/SS1.png)
+![Alt text](libs/SS1.png)
 
 ![Alt text](https://github.com/TSPeterson206/Quarter-1/libs/SS2.png)
 
