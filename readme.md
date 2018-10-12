@@ -4,9 +4,17 @@ Rice is the largest crop (grown for human consumption) on the world.
 
 White Rice is a simple how to guide to cooking rice at home. There are many ways to cooking White Rice, this is our simple approach. Offering portioning options and an alert timer. Set it, forget it and enjoy!
 
-
 Please choose a single portion option, i.e. per serving or per person.
 Then set the timer, an audio alert will activate when the timer has run to zero. 
+
+
+![Alt text](https://github.com/TSPeterson206/Quarter-1/libs/SS1.png "Screenshot")
+
+![Alt text](https://github.com/TSPeterson206/Quarter-1/libs/SS2.png "Screenshot")
+
+![Alt text](https://github.com/TSPeterson206/Quarter-1/libs/SS3.png "Screenshot")
+
+
 
 Photo Credit: Photo by Sébastien Marchand on Unsplash
 Icon Credit: Font Awesome 
