@@ -4,10 +4,10 @@ Rice is the largest crop (grown for human consumption) on the world.
 
 Rice is a simple how to guide to cooking rice at home. There are many ways to cooking White Rice, this is our simple approach. Offering portioning options and an alert timer. Set it, forget it and enjoy!
 
----Installation Instructions---
+ 
+Photo Credit: Photo by Sébastien Marchand on Unsplash
 
-Fork and clone repository, or visit Rice.surge.sh. 
-
+Icon Credit: Font Awesome 
 
 ---Instructions---
 
@@ -29,6 +29,22 @@ Timer Interface, an audio and visual alarm will trigger once the time is complet
 
 
 
-Photo Credit: Photo by Sébastien Marchand on Unsplash
+# Quarter-One-Frontend-Project
 
-Icon Credit: Font Awesome 
+## To install
+
+```
+npm install
+```
+
+## To start development server
+
+```
+npm run dev
+```
+
+## To build
+
+```
+npm run-script build
+```
